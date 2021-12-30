@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-appbundle-app
+  name: root-appbundle-app-dev
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,6 +11,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: apps-children
-    repoURL: https://github.com/ransar/argocd-demo
+    path: argocd/apps-children
+    repoURL: https://github.com/ransar/argocd-demo.git
     targetRevision: HEAD
